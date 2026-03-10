@@ -3,7 +3,7 @@
 ## Overview
 
 This project implements a simple **terminal-based group chat system** using Python and TCP sockets.
-A single server manages multiple clients and allows them to exchange messages over a network connection.
+A single server manages multiple clients and allows them to share messages over a network connection.
 
 Each connected client chooses a username and can send messages that are delivered to all other active users.
 
@@ -31,7 +31,8 @@ When a client sends a message, the server formats it before sending it to others
 Example:
 
 ```
-(Aman) -> Hello everyone
+(pankaj) -> hi
+(nikhil raj) -> hlo pankaj
 ```
 
 This indicates the sender's username followed by the message content.
@@ -51,7 +52,7 @@ Example usage:
 
 ```
 /list
-Active users: Aman, Rahul
+Active users: nikhil raj, pankaj
 ```
 
 ---
@@ -61,9 +62,9 @@ Active users: Aman, Rahul
 ```
 chat-app/
 │
-├── server.py        # Chat server program
-├── client.py        # Client program
-├── server_log.txt   # Log file storing chat activity
+├── server.py
+├── client.py
+├── server_log.txt   # Log file storing chat activities, etc.
 └── README.md
 ```
 
@@ -79,7 +80,7 @@ Run the following command in a terminal:
 python3 server.py
 ```
 
-You should see a message indicating that the server is running.
+We will see a message indicating that the server is running.
 
 ---
 
@@ -96,7 +97,7 @@ Enter a username when prompted.
 Example:
 
 ```
-Choose username: Rahul
+Choose username: Pankaj (for example)
 ```
 
 ---
@@ -108,8 +109,8 @@ After connecting, users can type messages which will be visible to all other par
 Example session:
 
 ```
-(Aman) -> Hi
-(Rahul) -> Hello
+(pankaj) -> Hi
+(nikhil raj) -> Hello
 ```
 
 Commands such as `/list` and `/exit` can be used during the chat.
@@ -136,4 +137,4 @@ This file helps track server activity and debugging.
 
 ## Conclusion
 
-This project demonstrates how a basic multi-user chat application can be implemented using TCP sockets and threads. The server coordinates communication between clients and ensures messages are distributed efficiently among participants.
+This project explains how a basic multi-user chat application can be implemented using TCP sockets and threads. The server coordinates communication between clients and ensures messages are distributed efficiently among participants.
